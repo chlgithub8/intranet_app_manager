@@ -7,16 +7,8 @@ sslConfigPath=$dir/openssl.cnf
 param=$1
 
 echo "$param"
-getIpForMac(){
-  ifconfig | grep inet | grep -v inet6 | grep -v 127 | cut -d ' ' -f2
-}
 
-getIpForLinux(){
-  ip a | grep inet | grep -v inet6 | grep -v 127 | sed 's/^[ \t]*//g' | cut -d ' ' -f2
-}
-
-ip="127.0.0.1"
-ip="$(getIpForLinux)"
+ip="69.235.155.28"
 
 build(){
   mysqlAddr="docker_mysql"
