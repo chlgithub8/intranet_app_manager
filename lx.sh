@@ -60,8 +60,7 @@ startup(){
 openPage(){
   address="http://$ip:8080/account/signin"
   echo "$address"
-  x-www-browser "$address"
-}
+  }
 
 setup(){
   createCert
