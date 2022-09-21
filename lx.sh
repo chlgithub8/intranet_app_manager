@@ -16,7 +16,7 @@ getIpForLinux(){
 }
 
 ip="127.0.0.1"
-ip=$(getIpForLinux)
+ip="$(getIpForLinux)"
 
 build(){
   mysqlAddr="docker_mysql"
@@ -64,7 +64,7 @@ openPage(){
 }
 
 setup(){
-  # createCert
+  createCert
   build
   docker-compose build
   startup
