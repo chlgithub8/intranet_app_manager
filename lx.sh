@@ -12,13 +12,13 @@ ip="69.235.155.28"
 
 build(){
   mysqlAddr="docker_mysql"
-  sed -i "" "s/\${ip}/$mysqlAddr/" "$configPath"
+  # sed -i "" "s/\${ip}/$mysqlAddr/" "$configPath"
   gradle clean
   gradle build
   cd "$dir/build/libs/"
   mv intranet_app_manager*.jar intranet_app_manager.jar
   cd "$dir"
-  sed -i "" "s/$mysqlAddr/\${ip}/" "$configPath"
+  # sed -i "" "s/$mysqlAddr/\${ip}/" "$configPath"
 }
 
 createCert(){
@@ -29,7 +29,7 @@ createCert(){
   touch certs/CA/certs.db
   cp -rf "$sslConfigPath" certs/openssl.cnf
   echo 00 > certs/CA/serial
-  sed -i "" "s/\${ip}/$ip/" "$dir/certs/openssl.cnf"
+  # sed -i "" "s/\${ip}/$ip/" "$dir/certs/openssl.cnf"
   cd "$dir/certs"
   echo "输入:123456"
   openssl req -new -x509 -days 3650 -keyout ca.key -out ca.crt -config openssl.cnf

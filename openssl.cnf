@@ -10,9 +10,9 @@ stateOrProvinceName_default=ZheJiang
 localityName=Locality Name (eg, city)
 localityName_default=HangZhou
 organizationalUnitName=Organizational Unit Name (eg, section)
-organizationalUnitName_default=${ip}
+organizationalUnitName_default=69.235.155.28
 commonName=Internet Widgits Ltd
-commonName_default=${ip}
+commonName_default=69.235.155.28
 commonName_max=64
 
 [ v3_req ]
@@ -21,7 +21,7 @@ keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 subjectAltName = @alt_names
 
 [ alt_names ]
-DNS.1 = ${ip}
+DNS.1 = 69.235.155.28
 # section for the "default_ca" option
 [ca]
 default_ca=my_ca_default
@@ -37,7 +37,7 @@ default_days  = 365
 
 # section for DN field validation and order
 [my_ca_policy]
-commonName             = ${ip}
+commonName             = 69.235.155.28
 countryName            = CN
 stateOrProvinceName    = ZheJiang
 localityName           = HZ
