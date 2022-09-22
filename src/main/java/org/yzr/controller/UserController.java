@@ -92,9 +92,4 @@ public class UserController {
     public String signin(HttpServletRequest request) {
         return "signin";
     }
-
-    @GetMapping("/account/signup")
-    public String signup(HttpServletRequest request) {
-        return "signup";
-    }
 }
