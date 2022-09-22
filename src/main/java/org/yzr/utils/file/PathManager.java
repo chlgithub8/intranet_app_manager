@@ -13,6 +13,7 @@ public class PathManager {
     public static PathManager request(HttpServletRequest request) {
         PathManager pathManager = new PathManager();
         pathManager.host = request.getHeader("host");
+        pathManager.useHttps();
         return pathManager;
     }
 
